@@ -1,5 +1,9 @@
-from flask import Flask
+from flask import Flask, request
 from flask import render_template
+
+class User:
+    pass
+
 
 app = Flask(__name__)
 
@@ -7,10 +11,16 @@ app = Flask(__name__)
 def welcome():
     return render_template("index.html")
 
+@app.route("/sub", methods=["POST"])
+def sub():
+    print(request.form["email"])
+    return render_template("user/index.html")
 
 @app.route("/orgLogin")
 def orgLogin():
+    user["email"] = request.form["email"]
     return render_template("/organizer/orgLogin.html")
+
 
 @app.route("/userSignUp")
 def userSignUp():

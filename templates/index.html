@@ -26,13 +26,13 @@
 <body>
   <h1>User Login Page</h1>
   <p>Looking for the organizer login page? Please go <a href="orgLogin">here</a></p>
-  <!--<form action="main.html">-->
+  <form action="/sub" method="POST">
     <label for="email">Email:</label>
-    <input id="email" required>
+    <input id="email" name="email" required>
     <label for="email">Password:</label>
     <input id="password" type="password" required>
     <input type="submit" id="submit">
-  <!--</form>-->
+  </form>
   <p id="err"></p>
   <p>Don't have an account? Sign up <a href="userSignUp">here</a></p>
   

@@ -38,3 +38,15 @@ function logout(){
 		console.log("Error! " + error);
 	});
 }
+
+function setUser(type){
+	var user = firebase.auth().currentUser;
+	user.updateProfile({
+	  userType: type
+	}).then(function() {
+	  console.log("ok");
+	}).catch(function(error) {
+	  console.log("pass");
+	});
+}
+	
