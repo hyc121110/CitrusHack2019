@@ -12,19 +12,33 @@ app = Flask(__name__)
 def welcome():
     return render_template("index.html")
 
+
 @app.route("/scripts/index")
 def scriptind():
     return render_template("/scripts/index.js")
 
+
 @app.route("/scripts/init-fire")
 def scriptinitfire():
     return render_template("/scripts/init-firebase.js")
+
+
+@app.route("/scripts/home")
+def scripthome():
+    return render_template("/scripts/home.js")
+
+
+@app.route("/scripts/signUp")
+def scriptsignup():
+    return render_template("/scripts/signUp.js")
+
 
 @app.route("/successful", methods=["POST"])
 def successful():
     login_user = User(request.form["email"], request.form["password"])
     print(login_user.email)
     return render_template("user/index.html")
+
 
 @app.route("/orgLogin")
 def orgLogin():
