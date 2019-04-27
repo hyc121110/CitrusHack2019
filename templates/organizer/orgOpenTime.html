@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <title>Open Time Page| Employee Schedule Application</title>
+  
+  <!--  Styles  -->
+  <link rel="stylesheet" href="../styles/availability.processed.css">
+</head>
+<body>
+  <h1>Company or Organization Open Time Page</h1>
+  <form action="orgUserInfo.html">
+	  <table>
+		<tr>
+		  <th>Day of Week</th>
+		  <th>Monday</th>
+		  <th>Tuesday</th>
+		  <th>Wednesday</th>
+		  <th>Thursday</th>
+		  <th>Friday</th>
+		  <th>Saturday</th>
+		  <th>Sunday</th>
+		</tr>
+		<tr>
+		  <td><p>Start time: </p></td>
+		  <td><input type="time" id="mondayStart" required></td>
+		  <td><input type="time" id="tuesdayStart" required></td>
+		  <td><input type="time" id="wednesdayStart" required></td>
+		  <td><input type="time" id="thursdayStart" required></td>
+		  <td><input type="time" id="fridayStart" required></td>
+		  <td><input type="time" id="saturdayStart" required></td>
+		  <td><input type="time" id="sundayStart" required></td>
+		</tr>
+		<tr>
+		  <td><p>End time: </p></td>
+		  <td><input type="time" id="mondayEnd" required></td>
+		  <td><input type="time" id="tuesdayEnd" required></td>
+		  <td><input type="time" id="wednesdayEnd" required></td>
+		  <td><input type="time" id="thursdayEnd" required></td>
+		  <td><input type="time" id="fridayEnd" required></td>
+		  <td><input type="time" id="saturdayEnd" required></td>
+		  <td><input type="time" id="sundayEnd" required></td>
+	  </table>
+	<input type="submit">
+	</form>
+  <script src="../scripts/availability.js"></script>
+</body>
+</html>
