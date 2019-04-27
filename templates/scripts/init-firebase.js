@@ -9,22 +9,32 @@
  };
  firebase.initializeApp(config);
  
+ 
+ //firebase functions
+ 
 function signUp(email, password){
 	firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-	  // Handle Errors here.
-	  var errorCode = error.code;
-	  var errorMessage = error.message;
-	  console.log("Error Code: " + errorCode + "\n");
-      console.log("Error Message: " + errorMessage + "\n");
+	  // Handling errors
+	  console.log("Error Code: " + error.code + "\n");
+      console.log("Error Message: " + error.message + "\n");
 	});
 }
 
 function login(email, password){
+	/*
 	firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-	  // Handle Errors here.
-	  var errorCode = error.code;
-	  var errorMessage = error.message;
-	  console.log("Error Code: " + errorCode + "\n");
-      console.log("Error Message: " + errorMessage + "\n");
+	  // Handling errors
+	  console.log("Error Code: " + error.code + "\n");
+      console.log("Error Message: " + error.message + "\n");
+	  return error.code;
+	});
+	*/
+}
+
+function logout(){
+	firebase.auth().signOut().then(function() {
+	  // Sign-out successful.
+	}).catch(function(error) {
+		console.log("Error! " + error);
 	});
 }

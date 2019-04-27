@@ -6,16 +6,26 @@
   <meta charset="UTF-8" />
   <title>Employee Page | Employee Schedule Application</title>
   
-  <!--  Styles  -->
-  <link rel="stylesheet" href="styles/employee.processed.css">
 </head>
 <body>
   <a href="../schedule.html">View Schedule</a>
   <a href="availability.html">Change Availability</a>
-  <a href="../logout.html">Logout</a>
+  <a id="logout">Logout</a>
   
   
   <!-- Scripts -->
-  <script src="scripts/employee.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jQuery-->
+  
+  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
+  
+  <script defer src="../scripts/init-firebase.js"></script>
+  
+  <script src="../scripts/home.js"></script>
 </body>
 </html>

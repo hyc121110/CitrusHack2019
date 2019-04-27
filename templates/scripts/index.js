@@ -1,13 +1,19 @@
 $("#submit").click(function() {
+	var pass = true;
 	var email = $("#email").val();
 	var password =  $("#password").val();
-	login(email, password);
-	admin.auth().getUser(uid)
-  .then(function(userRecord) {
-    // See the UserRecord reference doc for the contents of userRecord.
-    console.log('Successfully fetched user data:', userRecord.toJSON());
-  })
-  .catch(function(error) {
-    console.log('Error fetching user data:', error);
-  });
+	var errMsg;
+	firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+	  pass = false;
+	  errMsg =  error.message;
+	  console.log("Error Code: " + error.code + "\n");
+      console.log("Error Message: " + error.message + "\n");
+	});
+	setTimeout(function(){
+	if (pass){
+		window.location = "user/index.html";
+	}else{
+		$("#err").html(errMsg);
+	}
+	}, 750);
 });
