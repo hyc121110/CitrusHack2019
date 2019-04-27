@@ -2,7 +2,8 @@ from flask import Flask, request
 from flask import render_template
 
 class User:
-    pass
+    def __init__(self, email, password):
+        self.email = email
 
 
 app = Flask(__name__)
@@ -11,9 +12,11 @@ app = Flask(__name__)
 def welcome():
     return render_template("index.html")
 
-@app.route("/sub", methods=["POST"])
-def sub():
-    print(request.form["email"])
+@app.route("/successful", methods=["POST"])
+def successful():
+    login_user = User(request.form["email"], request.form["password"])
+    print(login_user.email)
+    print(login_user.password)
     return render_template("user/index.html")
 
 @app.route("/orgLogin")
