@@ -17,4 +17,9 @@ def orgLogin():
 def userSignUp():
     return render_template("/user/signUp.html")
 
+
+@app.route("/schedule")
+def schedule():
+    return render_template("schedule.html")
+
 app.run()
