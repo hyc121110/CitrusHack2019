@@ -8,20 +8,37 @@
   
   <!--  Styles  -->
   <link rel="stylesheet" href="../styles/signUp.processed.css">
+  
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jQuery-->
+  
+  <!-- Firebase App -->
+  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+  
+  <!-- Firebase products -->
+  <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
 </head>
 <body>
   <h1>User Sign Up Page</h1>
-  <form action="availability.html">
+  <!--<form action="availability.html">-->
+  <!--<form>-->
     <label for="name">Full Name: </label>
     <input id="name" required>
     <label for="email">Email:</label>
     <input id="email" required>
     <label for="email">Password:</label>
     <input id="password" type="password" required>
-    <input type="submit">
+    <input type="submit" id="submit">
     <p>Already have an account? Please go to the login page <a href="../index.html">here</a></p>
-  </form>
-  <!-- Scripts -->
+  <!--</form>-->
+  
+  <!--<script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>-->
+  
   <script src="../scripts/signUp.js"></script>
+  
+  <script defer src="../scripts/init-firebase.js"></script><!--initializing firebase-->
+  
+  
 </body>
 </html>
