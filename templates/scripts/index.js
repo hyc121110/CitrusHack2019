@@ -10,10 +10,10 @@ $("#submit").click(function() {
       console.log("Error Message: " + error.message + "\n");
 	});
 	setTimeout(function(){
-	if (pass){
-		$("#post").click();
-	}else{
-		$("#err").html(errMsg);
-	}
+		if (pass){
+			$("#post").click();
+		}else{
+			$("#err").html(errMsg);
+		}
 	}, 750);
 });

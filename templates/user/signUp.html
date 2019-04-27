@@ -21,17 +21,17 @@
 </head>
 <body>
   <h1>User Sign Up Page</h1>
-  <!--<form action="availability.html">-->
-  <!--<form>-->
+  <form action="availability.html">
     <label for="name">Full Name: </label>
-    <input id="name" required>
+    <input id="name" name="name" required>
     <label for="email">Email:</label>
-    <input id="email" required>
+    <input id="email" name="email" required>
     <label for="email">Password:</label>
     <input id="password" type="password" required>
-    <input type="submit" id="submit">
-    <p>Already have an account? Please go to the login page <a href="/">here</a></p>
-  <!--</form>-->
+	<input type="submit" id="post" hidden>
+  </form>
+  <button id="submit">Submit</button>
+  <p>Already have an account? Please go to the login page <a href="../index.html">here</a></p>
   
   <!--<script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>-->
   

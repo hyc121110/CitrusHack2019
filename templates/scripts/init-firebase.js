@@ -20,17 +20,6 @@ function signUp(email, password){
 	});
 }
 
-function login(email, password){
-	/*
-	firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-	  // Handling errors
-	  console.log("Error Code: " + error.code + "\n");
-      console.log("Error Message: " + error.message + "\n");
-	  return error.code;
-	});
-	*/
-}
-
 function logout(){
 	firebase.auth().signOut().then(function() {
 	  // Sign-out successful.
@@ -38,15 +27,3 @@ function logout(){
 		console.log("Error! " + error);
 	});
 }
-
-function setUser(type){
-	var user = firebase.auth().currentUser;
-	user.updateProfile({
-	  userType: type
-	}).then(function() {
-	  console.log("ok");
-	}).catch(function(error) {
-	  console.log("pass");
-	});
-}
-	
