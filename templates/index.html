@@ -9,6 +9,22 @@
   <!--  Styles  -->
   <link rel="stylesheet" href="styles/index.processed.css">
   
+  
+</head>
+<body>
+  <h1>User Login Page</h1>
+  <p>Looking for the organizer login page? Please go <a href="orgLogin">here</a></p>
+  <form action="/successful" method="POST">
+    <label for="email">Email:</label>
+    <input id="email" name="email" required>
+    <label for="password">Password:</label>
+    <input id="password" name="password" type="password" required>
+    <input type="submit" id="post" hidden>
+  </form>
+  <button id="submit">Submit</button>
+  <p id="err"></p>
+  <p>Don't have an account? Sign up <a href="userSignUp">here</a></p>
+  
   <!-- Scripts -->
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jQuery-->
@@ -21,21 +37,7 @@
   <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
   <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
   
-  <script defer src="scripts/init-firebase.js"></script>
-</head>
-<body>
-  <h1>User Login Page</h1>
-  <p>Looking for the organizer login page? Please go <a href="orgLogin">here</a></p>
-  <form action="/successful" method="POST">
-    <label for="email">Email:</label>
-    <input id="email" name="email" required>
-    <label for="password">Password:</label>
-    <input id="password" name="password" type="password" required>
-    <input type="submit" id="submit">
-  </form>
-  <p id="err"></p>
-  <p>Don't have an account? Sign up <a href="userSignUp">here</a></p>
-  
-  <script defer src="scripts/index.js"></script>
+  <script defer src="scripts/init-fire"></script>
+  <script src="scripts/index"></script>
 </body>
 </html>

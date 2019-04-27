@@ -11,7 +11,7 @@ $("#submit").click(function() {
 	});
 	setTimeout(function(){
 	if (pass){
-		window.location = "user/index.html";
+		$("#post").click();
 	}else{
 		$("#err").html(errMsg);
 	}
