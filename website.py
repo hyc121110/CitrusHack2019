@@ -32,6 +32,9 @@ def scripthome():
 def scriptsignup():
     return render_template("/scripts/signUp.js")
 
+@app.route("/styles/main")
+def mainstyle():
+    return render_template("/styles/main.css")
 
 @app.route("/successful", methods=["POST"])
 def successful():
