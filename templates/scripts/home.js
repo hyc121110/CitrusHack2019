@@ -1,4 +1,4 @@
 $("#logout").click(function() {
 	logout();
-	window.location = "../logout.html";
+	window.location = "../logout";
 });
