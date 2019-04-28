@@ -11,7 +11,7 @@
 </head>
 <body>
   <h1>Weekly Availability Page</h1>
-  <form action="/">
+  <form action="home" method="POST">
   <table>
     <tr>
       <th>Day of Week</th>
@@ -25,23 +25,23 @@
     </tr>
     <tr>
       <td><p>Start time: </p></td>
-      <td><input type="time" id="mondayStart" required></td>
-      <td><input type="time" id="tuesdayStart" required></td>
-      <td><input type="time" id="wednesdayStart" required></td>
-      <td><input type="time" id="thursdayStart" required></td>
-      <td><input type="time" id="fridayStart" required></td>
-      <td><input type="time" id="saturdayStart" required></td>
-      <td><input type="time" id="sundayStart" required></td>
+      <td><input type="time" id="mondayStart" name="monS" required></td>
+      <td><input type="time" id="tuesdayStart" name="tueS" required></td>
+      <td><input type="time" id="wednesdayStart" name="wedS" required></td>
+      <td><input type="time" id="thursdayStart" name="thuS" required></td>
+      <td><input type="time" id="fridayStart" name="friS" required></td>
+      <td><input type="time" id="saturdayStart" name="satS" required></td>
+      <td><input type="time" id="sundayStart" name="sunS" required></td>
     </tr>
     <tr>
       <td><p>End time: </p></td>
-      <td><input type="time" id="mondayEnd" required></td>
-      <td><input type="time" id="tuesdayEnd" required></td>
-      <td><input type="time" id="wednesdayEnd" required></td>
-      <td><input type="time" id="thursdayEnd" required></td>
-      <td><input type="time" id="fridayEnd" required></td>
-      <td><input type="time" id="saturdayEnd" required></td>
-      <td><input type="time" id="sundayEnd" required></td>
+      <td><input type="time" id="mondayEnd" name="monE" required></td>
+      <td><input type="time" id="tuesdayEnd" name="tueE" required></td>
+      <td><input type="time" id="wednesdayEnd" name="wedE" required></td>
+      <td><input type="time" id="thursdayEnd" name="thuE" required></td>
+      <td><input type="time" id="fridayEnd" name="friE" required></td>
+      <td><input type="time" id="saturdayEnd" name="satE" required></td>
+      <td><input type="time" id="sundayEnd" name="sunE" required></td>
   </table>
   <input type="submit">
   </form>

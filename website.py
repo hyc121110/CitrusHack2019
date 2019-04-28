@@ -1,10 +1,32 @@
-from flask import Flask, request
-from flask import render_template
+from flask import Flask, request, session
+from flask import render_template, url_for, redirect
+import csv
 
 class User:
-    def __init__(self, email, password):
+    def __init__(self, email):
         self.email = email
+    
 
+class Times:
+    def __init__(self, monS, tueS, wedS, thuS, friS, satS, sunS, monE, tueE, wedE, thuE, friE, satE, sunE):
+        self.monS = monS
+        self.tueS = tueS
+        self.wedS = wedS
+        self.thuS = thuS
+        self.friS = friS
+        self.satS = satS
+        self.sunS = sunS
+        self.monE = monE
+        self.tueE = tueE
+        self.wedE = wedE
+        self.thuE = thuE
+        self.friE = friE
+        self.satE = satE
+        self.sunE = sunE
+
+users = []
+names = {}
+idx = 0
 
 app = Flask(__name__)
 
@@ -38,16 +60,36 @@ def mainstyle():
 
 @app.route("/successful", methods=["POST"])
 def successful():
-    login_user = User(request.form["email"], request.form["password"])
-    print(login_user.email)
+    login_user = User(request.form["email"])
+    users.append(login_user)
+    return render_template("user/index.html")
+
+@app.route("/home", methods=["POST"])
+def home():
+    rows = [request.form["monS"], request.form["monE"],
+            request.form["tueS"], request.form["tueE"],
+            request.form["wedS"], request.form["wedE"],
+            request.form["thuS"], request.form["thuE"],
+            request.form["friS"], request.form["friE"],
+            request.form["satS"], request.form["satE"],
+            request.form["sunS"], request.form["sunE"]]
+    
+    with open("new_file.csv", "a") as f:
+        ruleswriter = csv.writer(f)
+        ruleswriter.writerow([row for row in rows])
+
     return render_template("user/index.html")
 
 @app.route("/userSignUp")
 def userSignUp():
     return render_template("/user/signUp.html")
 
-@app.route("/availability")
+
+@app.route("/availability", methods=["POST"])
 def availability():
+    with open("new_file.csv", "a") as f:
+        ruleswriter = csv.writer(f)
+        ruleswriter.writerow([request.form["name"]])
     return render_template("/user/availability.html")
 
 @app.route("/schedule")
