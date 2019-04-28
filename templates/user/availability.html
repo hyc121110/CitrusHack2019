@@ -46,5 +46,27 @@
   <input type="submit">
   </form>
   <script src="../scripts/openTIme.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jQuery-->
+  
+  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
+  
+  <script defer src="scripts/init-fire"></script>
+  
+  <script>
+	firebase.auth().currentUser.updateProfile({photoURL: null}).then(function() {
+	  var displayName = user.displayName;
+	  console.log(displayName);
+	}, function(error) {
+	  console.log(error);
+	});
+  </script>
+  
 </body>
 </html>
