@@ -13,6 +13,7 @@
  //firebase functions
  
 function signUp(email, password){
+	console.log("signed up");
 	firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
 	  // Handling errors
 	  console.log("Error Code: " + error.code + "\n");

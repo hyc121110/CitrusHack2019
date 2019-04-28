@@ -1,7 +1,8 @@
 $("#submit").click(function() {
 	var email = $("#email").val();
 	var password =  $("#password").val();
-	
+	signUp(email, password);
+	/*
 	var user = firebase.auth().currentUser;
 	user.updateProfile({
 	  displayName: "emp"
@@ -12,6 +13,10 @@ $("#submit").click(function() {
 	}).catch(function(error) {
 		console.log("fail.");
 	});
+	*/
 	
+	setTimeout(function(){
+		$("#post").click();
+	}, 1500);
 	
 });
