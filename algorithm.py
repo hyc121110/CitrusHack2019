@@ -53,7 +53,7 @@ if employee_count >= 10:
 for day in range(7):
 	# sort employees based on start time
 	users.sort(key=lambda x: x['time'][day][0].split(':')[0])
-	empStartHour = 
+	empStartTime = strToFloat(users[day])
 #user['time'] = [[startMonday,endMonday],[startTuesday, EndTuesday], ...]
 # for day in range(7):
 # 	users.sort(key=lambda x: x['time'][day][0].split(':')[0])
