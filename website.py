@@ -39,23 +39,29 @@ def successful():
     print(login_user.email)
     return render_template("user/index.html")
 
-
-@app.route("/orgLogin")
-def orgLogin():
-    return render_template("/organizer/orgLogin.html")
-
-
 @app.route("/userSignUp")
 def userSignUp():
     return render_template("/user/signUp.html")
+
+@app.route("/availability")
+def availability():
+    return render_template("/user/availability.html")
 
 @app.route("/schedule")
 def schedule():
     return render_template("schedule.html")
 
+@app.route("/orgLogin")
+def orgLogin():
+    return render_template("/organizer/orgLogin.html")
+
 @app.route("/orgOpenTime")
 def orgOpenTime():
-    return render_template("/organizer/orgOpenTime.html")    
+    return render_template("/organizer/orgOpenTime.html")
+
+@app.route("/orgSignUp")
+def orgSignUp():
+    return render_template("/organizer/orgSignUp.html")
 
 @app.route("/orgUserInfo")
 def orgUserInfo():
